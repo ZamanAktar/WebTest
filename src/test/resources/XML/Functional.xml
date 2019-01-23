@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="TestSuite" thread-count="0">
+
+	<test name="SingIn Test">
+
+		<parameter name="browser" value="Chrome" />
+
+		<classes>
+
+			<class name="org.naic.mfl.se.challenge.WebTestTestNG">
+
+			</class>
+
+		</classes>
+
+	</test>
+
+</suite>
