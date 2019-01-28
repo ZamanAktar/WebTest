@@ -1,189 +1,111 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="3" failed="0" ignored="0" total="3" passed="0">
+<testng-results skipped="0" failed="0" ignored="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="59" started-at="2019-01-23T03:31:51Z" finished-at="2019-01-23T03:31:51Z">
+  <suite name="TestSuite" duration-ms="40894" started-at="2019-01-28T19:10:48Z" finished-at="2019-01-28T19:11:29Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="59" started-at="2019-01-23T03:31:51Z" finished-at="2019-01-23T03:31:51Z">
-      <class name="org.naic.mfl.se.challenge.WebTestTestNG">
-        <test-method status="FAIL" signature="setUp(java.lang.String)[pri:0, instance:org.naic.mfl.se.challenge.WebTestTestNG@26653222]" name="setUp" is-config="true" duration-ms="0" started-at="2019-01-23T03:31:51Z" finished-at="2019-01-23T03:31:51Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
-in C:\Users\PaxoTech Student\AppData\Local\Temp\testng-eclipse--1320474473\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
-in C:\Users\PaxoTech Student\AppData\Local\Temp\testng-eclipse--1320474473\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+    <test name="Login Test" duration-ms="19082" started-at="2019-01-28T19:10:48Z" finished-at="2019-01-28T19:11:07Z">
+      <class name="org.naic.mfl.se.challenge.LoginPageTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:org.naic.mfl.se.challenge.LoginPageTest@78186a70]" name="beforeClass" is-config="true" duration-ms="9" started-at="2019-01-28T19:10:48Z" finished-at="2019-01-28T19:10:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:org.naic.mfl.se.challenge.LoginPageTest@78186a70]" name="setUp" is-config="true" duration-ms="9021" started-at="2019-01-28T19:10:48Z" finished-at="2019-01-28T19:10:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setUp -->
-        <test-method status="SKIP" signature="checkoutTest()[pri:0, instance:org.naic.mfl.se.challenge.WebTestTestNG@26653222]" name="checkoutTest" duration-ms="0" started-at="2019-01-23T03:31:51Z" finished-at="2019-01-23T03:31:51Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
-in C:\Users\PaxoTech Student\AppData\Local\Temp\testng-eclipse--1320474473\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
-in C:\Users\PaxoTech Student\AppData\Local\Temp\testng-eclipse--1320474473\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- checkoutTest -->
-        <test-method status="SKIP" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:org.naic.mfl.se.challenge.WebTestTestNG@26653222]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-23T03:31:51Z" finished-at="2019-01-23T03:31:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="SKIP" signature="logInTest()[pri:0, instance:org.naic.mfl.se.challenge.WebTestTestNG@26653222]" name="logInTest" duration-ms="0" started-at="2019-01-23T03:31:51Z" finished-at="2019-01-23T03:31:51Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
-in C:\Users\PaxoTech Student\AppData\Local\Temp\testng-eclipse--1320474473\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
-in C:\Users\PaxoTech Student\AppData\Local\Temp\testng-eclipse--1320474473\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
+        <test-method status="PASS" signature="logInTest()[pri:0, instance:org.naic.mfl.se.challenge.LoginPageTest@78186a70]" name="logInTest" duration-ms="7180" started-at="2019-01-28T19:10:57Z" description="Log in to the Application" finished-at="2019-01-28T19:11:04Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logInTest -->
-        <test-method status="SKIP" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:org.naic.mfl.se.challenge.WebTestTestNG@26653222]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-23T03:31:51Z" finished-at="2019-01-23T03:31:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="SKIP" signature="signInTest()[pri:0, instance:org.naic.mfl.se.challenge.WebTestTestNG@26653222]" name="signInTest" duration-ms="0" started-at="2019-01-23T03:31:51Z" finished-at="2019-01-23T03:31:51Z">
-          <exception class="org.testng.TestNGException">
-            <message>
-              <![CDATA[
-Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
-in C:\Users\PaxoTech Student\AppData\Local\Temp\testng-eclipse--1320474473\testng-customsuite.xml]]>
-            </message>
-            <full-stacktrace>
-              <![CDATA[org.testng.TestNGException: 
-Parameter 'browser' is required by BeforeClass on method setUp but has not been marked @Optional or defined
-in C:\Users\PaxoTech Student\AppData\Local\Temp\testng-eclipse--1320474473\testng-customsuite.xml
-at org.testng.internal.Parameters.createParams(Parameters.java:290)
-at org.testng.internal.Parameters.createParametersForMethod(Parameters.java:359)
-at org.testng.internal.Parameters.createParameters(Parameters.java:620)
-at org.testng.internal.Parameters.createConfigurationParameters(Parameters.java:190)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:209)
-at org.testng.internal.Invoker.invokeConfigurations(Invoker.java:142)
-at org.testng.internal.TestMethodWorker.invokeBeforeClassMethods(TestMethodWorker.java:168)
-at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:105)
-at org.testng.TestRunner.privateRun(TestRunner.java:648)
-at org.testng.TestRunner.run(TestRunner.java:505)
-at org.testng.SuiteRunner.runTest(SuiteRunner.java:455)
-at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:450)
-at org.testng.SuiteRunner.privateRun(SuiteRunner.java:415)
-at org.testng.SuiteRunner.run(SuiteRunner.java:364)
-at org.testng.SuiteRunnerWorker.runSuite(SuiteRunnerWorker.java:52)
-at org.testng.SuiteRunnerWorker.run(SuiteRunnerWorker.java:84)
-at org.testng.TestNG.runSuitesSequentially(TestNG.java:1208)
-at org.testng.TestNG.runSuitesLocally(TestNG.java:1137)
-at org.testng.TestNG.runSuites(TestNG.java:1049)
-at org.testng.TestNG.run(TestNG.java:1017)
-at org.testng.remote.AbstractRemoteTestNG.run(AbstractRemoteTestNG.java:114)
-at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
-at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
-]]>
-            </full-stacktrace>
-          </exception> <!-- org.testng.TestNGException -->
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signInTest -->
-        <test-method status="SKIP" signature="afterMethod(org.testng.ITestResult)[pri:0, instance:org.naic.mfl.se.challenge.WebTestTestNG@26653222]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-01-23T03:31:51Z" finished-at="2019-01-23T03:31:51Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- afterMethod -->
-        <test-method status="SKIP" signature="tearDown()[pri:0, instance:org.naic.mfl.se.challenge.WebTestTestNG@26653222]" name="tearDown" is-config="true" duration-ms="0" started-at="2019-01-23T03:31:51Z" finished-at="2019-01-23T03:31:51Z">
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.naic.mfl.se.challenge.LoginPageTest@78186a70]" name="tearDown" is-config="true" duration-ms="2852" started-at="2019-01-28T19:11:04Z" finished-at="2019-01-28T19:11:07Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=logInTest status=SUCCESS method=LoginPageTest.logInTest()[pri:0, instance:org.naic.mfl.se.challenge.LoginPageTest@78186a70] output={null}]]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- org.naic.mfl.se.challenge.WebTestTestNG -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- org.naic.mfl.se.challenge.LoginPageTest -->
+    </test> <!-- Login Test -->
+    <test name="SingIn Test" duration-ms="24380" started-at="2019-01-28T19:10:48Z" finished-at="2019-01-28T19:11:13Z">
+      <class name="org.naic.mfl.se.challenge.RegistrationPageTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:org.naic.mfl.se.challenge.RegistrationPageTest@c81cdd1]" name="beforeClass" is-config="true" duration-ms="1" started-at="2019-01-28T19:10:48Z" finished-at="2019-01-28T19:10:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:org.naic.mfl.se.challenge.RegistrationPageTest@c81cdd1]" name="setUp" is-config="true" duration-ms="8966" started-at="2019-01-28T19:10:48Z" finished-at="2019-01-28T19:10:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="signInTest()[pri:0, instance:org.naic.mfl.se.challenge.RegistrationPageTest@c81cdd1]" name="signInTest" duration-ms="12565" started-at="2019-01-28T19:10:57Z" description="Create a new User" finished-at="2019-01-28T19:11:10Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signInTest -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.naic.mfl.se.challenge.RegistrationPageTest@c81cdd1]" name="tearDown" is-config="true" duration-ms="2834" started-at="2019-01-28T19:11:10Z" finished-at="2019-01-28T19:11:13Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=signInTest status=SUCCESS method=RegistrationPageTest.signInTest()[pri:0, instance:org.naic.mfl.se.challenge.RegistrationPageTest@c81cdd1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.naic.mfl.se.challenge.RegistrationPageTest -->
+    </test> <!-- SingIn Test -->
+    <test name="Checkout test" duration-ms="40881" started-at="2019-01-28T19:10:48Z" finished-at="2019-01-28T19:11:29Z">
+      <class name="org.naic.mfl.se.challenge.CheckoutPageTest">
+        <test-method status="PASS" signature="beforeClass()[pri:0, instance:org.naic.mfl.se.challenge.CheckoutPageTest@727803de]" name="beforeClass" is-config="true" duration-ms="0" started-at="2019-01-28T19:10:48Z" finished-at="2019-01-28T19:10:48Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeClass -->
+        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:org.naic.mfl.se.challenge.CheckoutPageTest@727803de]" name="setUp" is-config="true" duration-ms="8788" started-at="2019-01-28T19:10:48Z" finished-at="2019-01-28T19:10:57Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[Chrome]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setUp -->
+        <test-method status="PASS" signature="checkoutTest()[pri:0, instance:org.naic.mfl.se.challenge.CheckoutPageTest@727803de]" name="checkoutTest" duration-ms="29518" started-at="2019-01-28T19:10:57Z" description="Select a product and Checkout" finished-at="2019-01-28T19:11:27Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- checkoutTest -->
+        <test-method status="PASS" signature="tearDown(org.testng.ITestResult)[pri:0, instance:org.naic.mfl.se.challenge.CheckoutPageTest@727803de]" name="tearDown" is-config="true" duration-ms="2562" started-at="2019-01-28T19:11:27Z" finished-at="2019-01-28T19:11:29Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=checkoutTest status=SUCCESS method=CheckoutPageTest.checkoutTest()[pri:0, instance:org.naic.mfl.se.challenge.CheckoutPageTest@727803de] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- org.naic.mfl.se.challenge.CheckoutPageTest -->
+    </test> <!-- Checkout test -->
+  </suite> <!-- TestSuite -->
 </testng-results>

@@ -1,0 +1,1 @@
+LoginTest @ Variation ~ 1 | UserEmail ~ hf_challenge_1548655176573@hf176573.com | UserPassword ~ Qwerty | UserFullName ~ AkGkpluIaNne ZavSDooStEKl <endOfLine>

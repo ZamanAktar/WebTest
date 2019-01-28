@@ -13,14 +13,14 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 
-public class SignInPage extends PageBase {
+public class RegistrationPage extends PageBase {
 
 	// Login Button
 	@FindBy(className = "login")
 	WebElement loginButton;
 
 	// Create Email Address
-	@FindBy(id = "mail_create")
+	@FindBy(id = "email_create")
 	WebElement creatEmailAdd;
 	
 	// Click Submit Button
@@ -37,7 +37,7 @@ public class SignInPage extends PageBase {
 	@FindBy(id = "customer_lastname")
 	private WebElement lastName;
 
-	@FindBy(id = "customer_lastname")
+	@FindBy(id = "passwd")
 	private WebElement password;
 
 	@FindBy(id = "days")
@@ -83,18 +83,17 @@ public class SignInPage extends PageBase {
 	private WebElement submitAccount;
 	
 	 @FindBy(className = "info-account")
-	    WebElement accountInfo;
+	 private  WebElement accountInfo;
 
-	
-	  //logout
-    @FindBy(name = "logout")
+	//logout
+    @FindBy(className = "logout")
     WebElement logoutButton;
 
 	/*********************************************************************************************************
 	 * 
 	 * @param driver Constructor
 	 */
-	public SignInPage(WebDriver driver) {
+	public RegistrationPage(WebDriver driver) {
 		super(driver);
 		PageFactory.initElements(driver, this);
 	}
@@ -170,7 +169,7 @@ public class SignInPage extends PageBase {
 	
 	public void selectStates(String value) {
 		Select select = new Select(idState);
-		select.selectByValue(value);
+		select.selectByVisibleText(value);
 	}
 	
 	public void enterPostcode(String text) {
@@ -214,11 +213,13 @@ public class SignInPage extends PageBase {
 	 }
 	
 	 public void checkAccountInfo(String accountInformation) {
-	        Assert.assertEquals(accountInformation, accountInfo.getText());
+		 String account = accountInfo.getText(); 
+		 String splitAccount = account.split("\\.")[0]+".";
+		 Assert.assertEquals(splitAccount, accountInformation);
 	    }
     
 	 public void checkAccount(String name, String surname) {
-    Assert.assertEquals(getDriver().findElement(By.className("account")).getText(), name + " " + surname);
+		 Assert.assertEquals(getDriver().findElement(By.className("account")).getText(), name + " " + surname);
 	 }
 	
 	

@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<suite name="TestSuite" thread-count="2" parallel="tests">
-
-	<test name="ChromeTest">
-
-		<parameter name="browser" value="Chrome" />
-
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuite" thread-count="3" parallel = "tests">
+<parameter name="browser" value="Chrome" />
+	
+	<test name="SingIn Test">
+	
 		<classes>
 
-			<class name="parallelTest.CrossBrowserScript">
+			<class name="org.naic.mfl.se.challenge.RegistrationPageTest">
 
 			</class>
 
@@ -15,13 +15,11 @@
 
 	</test>
 
-	<test name="FirefoxTest">
-
-		<parameter name="browser" value="Firefox" />
+	<test name="Login Test">
 
 		<classes>
 
-			<class name="parallelTest.CrossBrowserScript">
+			<class name="org.naic.mfl.se.challenge.LoginPageTest">
 
 			</class>
 
@@ -29,13 +27,11 @@
 
 	</test>
 
-	<test name="EdgeTest">
-
-		<parameter name="browser" value="Edge" />
+	<test name="Checkout test">
 
 		<classes>
 
-			<class name="parallelTest.CrossBrowserScript">
+			<class name="org.naic.mfl.se.challenge.CheckoutPageTest">
 
 			</class>
 
@@ -43,4 +39,5 @@
 
 	</test>
 
+	
 </suite>

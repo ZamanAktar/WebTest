@@ -8,6 +8,9 @@ public class Log {
 	public static void info(String message) {
 		log.info(message);
 	}
+	public static void info(String name ,String message) {
+		log.info(name +message);
+	}
 
 	public static void warn(String message) {
 		log.warn(message);

@@ -1,5 +1,6 @@
 package org.naic.mfl.se.base;
 
+import java.net.MalformedURLException;
 import java.util.concurrent.TimeUnit;
 
 import org.naic.mfl.se.utilities.ScreenShotUtility;
@@ -7,27 +8,36 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.ITestResult;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
-import org.testng.annotations.Parameters;
+import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.Listeners;
 
 
+import com.paxovision.execution.reporter.listener.ReporterTestListener;
+import com.paxovision.execution.reporter.service.ReporterService;
+
+@Listeners({ReporterTestListener.class})
 public class ScriptBase {
 
-	private ApplicationController appController;
-	private WebDriver driver;
-	WebDriverWait wait;
-
+	protected WebDriver driver = null;
+	protected ReporterService reporter = ReporterService.reporter();
+	
 	@BeforeClass
-	@Parameters("browser")
-	public void setUp(String browser) throws Exception {
+	public void beforeClass() {
+		reporter.setReportPath(System.getProperty("user.dir")+"/test-output/htmlReport/");
+        reporter.setReportName("NAIC HTML Report");
+        reporter.setReportTitle("NAIC Test");
+        reporter.setCreateUniqueFileName(false);
+        
+	}
+	
+	@BeforeMethod(alwaysRun = true)
+	public synchronized void setUp(String browser) throws MalformedURLException{
 
 		if (browser.equalsIgnoreCase("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
-			driver = new ChromeDriver();
+			createChromeDriver();
 		}
 
 		else if (browser.equalsIgnoreCase("firefox")) {
@@ -41,35 +51,28 @@ public class ScriptBase {
 		}
 
 		else {
-
-			throw new Exception("Browser is not found");
+			createChromeDriver();
+			//throw new Exception("Browser is not found");
 		}
-		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
-		driver.get("http://automationpractice.com/index.php");
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		
-		appController = new ApplicationController(driver);
 	}
 
-	@AfterMethod
-	public void afterMethod(ITestResult result) {
+	@AfterMethod(alwaysRun = true)
+	public void tearDown(ITestResult result) {
 		if (ITestResult.FAILURE == result.getStatus()) {
 			ScreenShotUtility.captureScreenshot(driver, result.getMethod().getMethodName());
 		}
-	}
-
-	@AfterClass
-	public void tearDown() {
+		
 		driver.close();
 		driver.quit();
-	}
-
-	public WebDriver getDriver() {
-		return driver;
+		driver = null;
 	}
 	
-	public ApplicationController appController() {
-		return appController;
+	public void createChromeDriver() {
+		System.setProperty("webdriver.chrome.driver", "src/test/resources/drivers/chromedriver.exe");
+		driver = new ChromeDriver();
 	}
+	
 
 }

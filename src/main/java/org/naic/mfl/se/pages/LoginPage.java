@@ -1,6 +1,7 @@
 package org.naic.mfl.se.pages;
+import static org.testng.Assert.assertTrue;
+
 import org.naic.mfl.se.base.PageBase;
-import org.naic.mfl.se.utilities.Log;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -10,8 +11,9 @@ import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.testng.Assert;
 
 
-public class LoginPage extends PageBase{
 
+public class LoginPage extends PageBase{
+	
     public LoginPage(WebDriver driver) {
         super(driver);
         PageFactory.initElements(driver, this);
@@ -32,61 +34,58 @@ public class LoginPage extends PageBase{
     @FindBy(className = "account")
     WebElement account;
 
-    //name
-    @FindBy(className = "info-account")
-    WebElement accountInfo;
-
     //Submit Button
     @FindBy(name = "SubmitLogin")
     WebElement submitSigninButton;
 
     //logout
-    @FindBy(name = "logout")
+    @FindBy(className  = "logout")
     WebElement logoutButton;
 
     /*********************************************************************************************************
      * Actions and Validations
      */
 
-    public void setEmail(String emailText) {
-        Log.info("Email: " + emailText);
+    public LoginPage setEmail(String emailText) {
+    	logInfo("Enter Email Address",emailText);
         email.sendKeys(emailText);
+        return this;
     }
-
-    public void setPassword(String passwordText) {
-        Log.info("Password: " + passwordText);
-
+    
+   
+    public LoginPage setPassword(String passwordText) {
+        logInfo("Password",passwordText);
         password.sendKeys(passwordText);
+        return this;
     }
 
-    public void checkPageHeader(String heading) {
+    public LoginPage checkPageHeader(String heading) {
         WebElement pageHeader = getWait().until(ExpectedConditions.visibilityOfElementLocated(By.cssSelector("h1")));
         Assert.assertEquals(heading, pageHeader.getText());
-        Log.info("Page Header: " + pageHeader.getText());
+        logInfo("Page Header",pageHeader.getText());
+        return this;
     }
 
-    public void checkAccountName(String accountName) {
+    public LoginPage checkAccountName(String accountName) {
         Assert.assertEquals(accountName, account.getText());
+        return this;
     }
 
-    public void checkAccountInfo(String accountInformation) {
-        Assert.assertEquals(accountInformation, accountInfo.getText());
-    }
-
-    public void checkAccountURL(String containURL) {
+    public LoginPage checkAccountURL(String containURL) {
         String url = getDriver().getCurrentUrl();
         Assert.assertTrue(url.contains(containURL));
+        return this;
     }
 
-    public void clickSubmit() {
+    public LoginPage clickSubmit() {
         submitSigninButton.click();
-        Log.info("Submit Login Button");
+        return this;
     }
 
-    public void verifyLogout() {
-        logoutButton.isDisplayed();
-        Log.info(" Logout Button is displayed");
+    public LoginPage verifyLogout() {
+    	assertTrue(logoutButton.isDisplayed());
+    	return this;
+        
     }
-
 }
 

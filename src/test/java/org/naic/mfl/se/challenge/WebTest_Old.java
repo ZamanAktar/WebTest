@@ -15,7 +15,7 @@ import java.util.Date;
 import static junit.framework.TestCase.assertTrue;
 import static org.junit.Assert.assertEquals;
 
-public class WebTest {
+public class WebTest_Old {
     WebDriver driver;
     WebDriverWait wait;
 
